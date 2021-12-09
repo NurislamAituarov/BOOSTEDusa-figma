@@ -1,0 +1,353 @@
+main {
+}
+
+.main__block {
+  background-image: url('../../../image/Rectangle\ \(1\).png');
+  height: 810px;
+
+  .main__block_btn {
+    max-width: 430px;
+    margin: 22px auto;
+    button {
+      margin-left: 12px;
+    }
+  }
+}
+.main__block_title {
+  max-width: 537px;
+  margin: 0 auto;
+  padding-top: 53px;
+  text-align: center;
+  h1 {
+    font-size: 44px;
+    line-height: 50px;
+    margin-bottom: 14px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+}
+// block//////////
+.block {
+  min-height: 83px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 191px;
+  .block__img {
+    cursor: pointer;
+  }
+  .block__img:nth-child(1),
+  .block__img:nth-child(4) {
+    margin-bottom: 17px;
+  }
+}
+hr {
+  height: 2px;
+  background-color: #cfcfcf;
+  width: 70px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 44px;
+}
+
+//////////block__looking////////////////////////////////
+
+.block__looking {
+  padding: 3.6% 9% 1.5% 9.1%;
+  .block__looking_title {
+    max-width: 705px;
+    padding-top: 0px;
+    h1 {
+      margin-bottom: 17px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+  .block__looking_item {
+    display: flex;
+    justify-content: space-between;
+    .item {
+      width: 580px;
+      height: 580px;
+      position: relative;
+      .item__block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        h2 {
+          font-size: 25px;
+          line-height: 32px;
+          margin-bottom: 14px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+    .first__item {
+      background-image: url('../../../image/item1.png');
+      background-position: center;
+      background-size: cover;
+    }
+    .second__item {
+      background-image: url('../../../image/item2.png');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+// block__skateboards////////////////////////////////////////////////////////////////
+
+.block__skateboards {
+  width: 100%;
+  background-image: url('../../../image/electr.png');
+  background-size: cover;
+  height: 736px;
+  margin-bottom: 44px;
+  .block__skateboards_title {
+    padding-top: 44px;
+    h1 {
+      font-weight: 700;
+    }
+    span {
+      margin-bottom: 11px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+    button {
+      margin-top: 25px;
+    }
+  }
+}
+// block__cards/////////
+.block__cards {
+  padding-bottom: 55px;
+  .block__cards_top {
+    padding: 0 150px 45px 9.1%;
+    display: flex;
+    // flex-wrap: wrap;
+    div {
+      width: 380px;
+      height: 380px;
+    }
+    .first__card {
+      margin-right: 20px;
+    }
+    .second__card {
+      margin-right: 40px;
+    }
+    .three__card {
+      width: 339px;
+    }
+    .block__cards_top-title {
+      width: 100%;
+      text-align: start;
+      h2 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      p {
+        line-height: 22px;
+        margin-bottom: 23px;
+      }
+      button {
+        width: 100px;
+        height: 33px;
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+  }
+  .block__cards_bottom {
+    display: flex;
+    img {
+      transition: 0.5s;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+  .block__cards_item {
+    position: relative;
+    max-width: 480px;
+    max-height: 480px;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+// media/////////
+@media (max-width: 1300px) {
+  .block__cards {
+    .block__cards_top {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      .first__card {
+        margin: 0;
+        margin-right: 20px;
+      }
+      .second__card {
+        margin: 0;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main__block {
+    height: 457px;
+    .main__block_title {
+      padding-top: 100px;
+    }
+    .main__block_btn {
+      width: 220px;
+      margin: 0 auto;
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .block {
+    padding: 20px;
+    display: block;
+    .block__img {
+      width: max-content;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    .block__img:nth-child(1) {
+      margin-bottom: 50px;
+      margin-top: 30px;
+    }
+  }
+
+  .block__looking {
+    padding: 20px;
+    .block__looking_item {
+      .item {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+
+  .block__cards {
+    .block__cards_top {
+      padding-top: 0;
+      .block__cards_top-title {
+        padding: 0;
+      }
+      .first__card {
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .second__card {
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .three__card {
+        margin: 0 auto;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main__block {
+    .main__block_title {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .block__looking {
+    hr {
+      margin-bottom: 25px;
+      margin-top: 15px;
+    }
+  }
+  .block__skateboards {
+    .block__skateboards_title {
+      h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .block__cards {
+    padding-bottom: 20px;
+    .block__cards_top {
+      .first__card {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+        }
+      }
+      .second__card {
+        width: 100%;
+        height: 300px;
+        img {
+          width: 100%;
+        }
+      }
+      .three__card {
+        margin-top: 35px;
+        .block__cards_top-title {
+          height: 263px;
+          h2 {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    .block__cards_bottom {
+      .block__cards_item {
+        .item {
+          h2 {
+            font-size: 15px;
+            line-height: 15px;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 10px;
+            line-height: 8px;
+          }
+        }
+      }
+    }
+  }
+}
