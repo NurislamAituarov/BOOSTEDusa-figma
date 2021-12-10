@@ -36,10 +36,13 @@
 
 .block__accessories_slider {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 10px;
+  .accessories__wrapper {
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .slider__accessories_item {
     text-align: center;
     max-width: 186px;
@@ -115,18 +118,34 @@
 // media////////////////
 
 @media (max-width: 1300px) {
-  .block__accessories_slider {
+  .accessories__wrapper {
     flex-wrap: wrap;
     justify-content: space-around;
   }
 }
 
 @media (max-width: 768px) {
+  .block__accessories {
+    h2 {
+      margin-top: 20px;
+    }
+  }
   .block__accessories_cards {
     padding: 0 20px;
     margin-top: 20px;
+
     div {
       height: 150px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .block__accessories_slider {
+    overflow: hidden;
+    height: 240px;
+    .accessories__wrapper {
+      justify-content: center;
     }
   }
 }

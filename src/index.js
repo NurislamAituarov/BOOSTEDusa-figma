@@ -3,4 +3,8 @@ import './modules/scss/Header.scss';
 import './modules/scss/Main.scss';
 import './modules/scss/Accessories.scss';
 import './modules/scss/Footer.scss';
+import header from './modules/js/Header';
+import slider from './modules/js/Slider';
 console.log('Hello world');
+header();
+slider();

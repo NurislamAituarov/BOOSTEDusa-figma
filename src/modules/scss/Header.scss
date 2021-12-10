@@ -78,8 +78,13 @@
       width: max-content;
       margin: 0 auto;
       text-align: center;
+      overflow: hidden;
+      height: 0;
+      transition: 1s;
       ul {
         display: block;
+        transform: translateY(-100px);
+        transition: 1s;
       }
     }
     .header__contact {
