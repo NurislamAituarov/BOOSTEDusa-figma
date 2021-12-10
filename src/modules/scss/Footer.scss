@@ -64,6 +64,8 @@
     display: flex;
     align-items: center;
     img {
+      width: 36px;
+      height: 22px;
       margin-left: 6px;
     }
   }
@@ -104,5 +106,15 @@
   }
   .footer__block2 {
     padding: 20px;
+  }
+  .footer__block3 {
+    padding: 20px 138px;
+    .footer__item2 {
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        height: 30px;
+      }
+    }
   }
 }
