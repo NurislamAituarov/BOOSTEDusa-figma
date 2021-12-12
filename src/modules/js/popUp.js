@@ -5,26 +5,26 @@ const formPopUp = () => {
 
   const timerPopUp = setTimeout(() => {
     wrapper.style.display = 'block';
-    document.querySelector('body').style.overflowY = 'hidden';
+    document.querySelector('html, body').style.overflowY = 'hidden';
   }, 5000);
 
   btnUser.addEventListener('click', () => {
     formWrapper.append(form);
     wrapper.style.display = 'block';
-    document.querySelector('body').style.overflowY = 'hidden';
+    document.querySelector('html, body').style.overflowY = 'hidden';
     clearTimeout(timerPopUp);
   });
 
   window.addEventListener('click', (e) => {
     if (e.target === wrapper) {
       wrapper.style.display = 'none';
-      document.querySelector('body').style.overflowY = '';
+      document.querySelector('html, body').style.overflowY = '';
     }
   });
 
   closePopUp.addEventListener('click', () => {
     wrapper.style.display = 'none';
-    document.querySelector('body').style.overflowY = '';
+    document.querySelector('html, body').style.overflowY = '';
   });
 
   //  form /////////////////////////
