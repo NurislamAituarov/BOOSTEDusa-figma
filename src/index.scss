@@ -12,6 +12,7 @@ textarea {
 }
 button {
   cursor: pointer;
+  font-family: inherit;
 }
 input {
   outline: none;
@@ -52,6 +53,7 @@ body {
   line-height: 22px;
   transition: 0.5s;
   padding: 5px 0;
+  font-weight: 700;
 }
 .button:hover {
   background-color: #e62d15;

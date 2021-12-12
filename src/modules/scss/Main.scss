@@ -62,10 +62,16 @@ hr {
   .block__looking_title {
     max-width: 705px;
     padding-top: 0px;
+
+    p {
+      max-width: 685px;
+      margin: 0 auto;
+    }
     h1 {
       margin-bottom: 17px;
       font-size: 32px;
       line-height: 36px;
+      letter-spacing: 1px;
     }
   }
   .block__looking_item {
@@ -116,10 +122,15 @@ hr {
   margin-bottom: 44px;
   .block__skateboards_title {
     padding-top: 44px;
+    p {
+      width: 485px;
+      margin: 0 auto;
+    }
     h1 {
       font-weight: 700;
     }
     span {
+      display: inline-block;
       margin-bottom: 11px;
       font-size: 15px;
       line-height: 18px;
