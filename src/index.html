@@ -36,7 +36,8 @@
                         </nav>
                     </div>
                     <div class="header__contact">
-                        <img src="https://cdn-icons-png.flaticon.com/512/848/848043.png" alt="user">
+                        <img id="header__contact_user" src="https://cdn-icons-png.flaticon.com/512/848/848043.png"
+                            alt="user">
                         <img class="contact_img" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
                             alt="user">
                     </div>
@@ -311,6 +312,61 @@
                 </div>
             </div>
         </footer>
+        <div class="wrapper__popUp">
+            <div class="form__wrapper">
+                <form action="#" class="form">
+                    <h1>Отправка данных на почту</h1>
+                    <div class="form__item">
+                        <label class="form__title" for="name">Имя*</label>
+                        <input class="form__input _req" name="name" id="name" type="text">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__title" for="email">Email*</label>
+                        <input class="form__input _req _email" name="email" id="email" type="email">
+                    </div>
+                    <div class="form__item">
+                        <div class="form__title">Левая или правая</div>
+                        <div class="options">
+                            <div class="options__item">
+                                <input class="form__radio" name="radio" checked type="radio" id="formRight">
+                                <label class="options__label" for="formRight">Правша</label>
+                            </div>
+                            <div class="options__item">
+                                <input class="form__radio" name="radio" type="radio" id="formLeft">
+                                <label class="options__label" for="formLeft">Лeвша</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__title" for="formMessage">Сообщение</label>
+                        <textarea name="message" id="formMessage" class="form__input _req" name="text"></textarea>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__title " for="">Возраст</label>
+                        <select name="age" id="select" class="form__input">
+                            <option value="от 18 до 25" selected>Молодой</option>
+                            <option value="от 25 до 445">Старый</option>
+                            <option value="от 45">Очень старый</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__title">Выберите файл</div>
+                        <input id="addImg" type="file" name="img" accept=".jpg, .png, .gif">
+                        <button class="form__button">Выбрать</button>
+                    </div>
+                    <div class="form__item item__checkbox">
+                        <input id="checkbox" class="form__input_checkbox " type="checkbox" name="checkbox">
+                        <label for="checkbox" class="form__title_checkbox">Я даю свое согласие на обработку персональных
+                            данных
+                        </label>
+                    </div>
+                    <button type="submit" class="form__button submit">Отправить</button>
+                </form>
+                <div class="close__popup">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="close">
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>

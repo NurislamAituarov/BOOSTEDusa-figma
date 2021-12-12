@@ -5,16 +5,16 @@ const slider = () => {
 
   let index = 0;
   function leftSlider() {
-    index += 240;
-    if (index === 1680) {
-      index = 0;
+    index -= 240;
+    if (index === -240) {
+      index = 1440;
     }
     wrapper.style.transform = `translateY(-${index}px)`;
   }
   function rightSlider() {
-    index -= 240;
-    if (index === -240) {
-      index = 1440;
+    index += 240;
+    if (index === 1680) {
+      index = 0;
     }
     wrapper.style.transform = `translateY(-${index}px)`;
   }

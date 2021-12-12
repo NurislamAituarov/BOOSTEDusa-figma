@@ -302,12 +302,18 @@ hr {
     }
   }
   .block__looking {
+    padding: 0px;
+    padding-top: 20px;
+    .block__looking_title {
+      padding: 0 20px;
+    }
     hr {
       margin-bottom: 25px;
       margin-top: 15px;
     }
   }
   .block__skateboards {
+    margin-bottom: 0;
     .block__skateboards_title {
       h1 {
         font-size: 32px;
@@ -316,22 +322,24 @@ hr {
     }
   }
   .block__cards {
+    padding: 0;
     padding-bottom: 20px;
     .block__cards_top {
       padding: 0;
       .first__card {
         width: 100%;
-        height: max-content;
-        // margin-bottom: 50px;
+        margin-bottom: 0px;
         img {
           width: 100%;
+          height: 100%;
         }
       }
       .second__card {
         width: 100%;
-        height: max-content;
+        margin-bottom: 0px;
         img {
           width: 100%;
+          height: 100%;
         }
       }
       .three__card {
