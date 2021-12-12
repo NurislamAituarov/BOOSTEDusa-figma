@@ -326,6 +326,10 @@ hr {
   .block__skateboards {
     margin-bottom: 0;
     .block__skateboards_title {
+      p {
+        width: 100%;
+        padding: 0 30px;
+      }
       h1 {
         font-size: 32px;
         margin-bottom: 5px;
