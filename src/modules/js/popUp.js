@@ -113,7 +113,7 @@ const formPopUp = () => {
           console.log('Error');
         })
         .finally(() => {
-          document.querySelector('body').style.overflowY = '';
+          document.querySelector('html, body').style.overflowY = '';
           setTimeout(
             () => ((wrapper.style.display = 'none'), document.querySelector('.sent').remove()),
             500,
