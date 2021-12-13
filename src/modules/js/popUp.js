@@ -114,7 +114,10 @@ const formPopUp = () => {
         })
         .finally(() => {
           document.querySelector('body').style.overflowY = '';
-          setTimeout(() => (wrapper.style.display = 'none'), 500);
+          setTimeout(
+            () => ((wrapper.style.display = 'none'), document.querySelector('.sent').remove()),
+            500,
+          );
         });
     } else {
       input.forEach((el) => {

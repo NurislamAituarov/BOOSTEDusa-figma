@@ -9,7 +9,7 @@
 }
 
 .form__wrapper {
-  max-width: 550px;
+  width: 550px;
   min-height: 600px;
   background-color: rgb(175, 175, 175);
   position: absolute;
@@ -187,6 +187,7 @@
     border-radius: 0;
     .form {
       padding: 20px;
+      height: 100%;
     }
   }
 }

@@ -241,7 +241,7 @@ hr {
 }
 @media (max-width: 768px) {
   .main__block {
-    height: 550px;
+    height: 500px;
     .main__block_title {
       padding-top: 100px;
     }
@@ -310,11 +310,33 @@ hr {
   .main__block {
     .main__block_title {
       padding: 100px 10px 20px 10px;
+      h1 {
+        font-size: 35px;
+      }
+    }
+    .main__block_btn {
+      width: 100%;
+      text-align: center;
+      button {
+        margin: 0;
+        width: 140px;
+        font-size: 11px;
+      }
+    }
+  }
+  .block {
+    img {
+      width: 100px;
     }
   }
   .block__looking {
     padding: 0px;
     padding-top: 20px;
+    .block__looking_item .item .item__block h2,
+    p {
+      font-size: 15px;
+      line-height: 20px;
+    }
     .block__looking_title {
       padding: 0 20px;
     }
