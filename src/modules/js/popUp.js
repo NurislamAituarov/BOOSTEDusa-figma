@@ -35,7 +35,8 @@ const formPopUp = () => {
     nameInput = document.querySelector('[name="name"]'),
     emailInput = document.querySelector('[name="email"]'),
     textarea = document.querySelector('[name="message"]'),
-    checkbox = document.querySelector('#checkbox');
+    checkbox = document.querySelector('#checkbox'),
+    loader = document.querySelector('.lds-spinner');
 
   input.forEach((el) => {
     el.addEventListener('input', (e) => {
@@ -97,13 +98,17 @@ const formPopUp = () => {
       const formData = new FormData(form);
       const obj = {};
       formData.forEach((item, i) => (obj[i] = item));
+
+      form.remove();
+      loader.style.display = 'block';
+
       request(obj)
         .then((response) => {
           input.forEach((el) => (el.value = ''));
           checkbox.checked = false;
           console.log(response);
 
-          form.remove();
+          loader.style.display = 'none';
           const sent = document.createElement('div');
           sent.classList.add('sent');
           sent.innerHTML = '<h2>Успешно отправлено </h2>';
