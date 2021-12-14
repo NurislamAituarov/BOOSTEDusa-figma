@@ -3,43 +3,64 @@ const formPopUp = () => {
     closePopUp = document.querySelector('.close__popup'),
     wrapper = document.querySelector('.wrapper__popUp');
 
-  const timerPopUp = setTimeout(() => {
+  function popUpShow() {
     wrapper.style.display = 'block';
     document.querySelector('html, body').style.overflowY = 'hidden';
-  }, 5000);
+  }
+  function popUpHidden() {
+    wrapper.style.display = 'none';
+    document.querySelector('html, body').style.overflowY = '';
+  }
 
+  const timerPopUp = setTimeout(() => {
+    popUpShow();
+  }, 5000);
   btnUser.addEventListener('click', () => {
     formWrapper.append(form);
-    wrapper.style.display = 'block';
-    document.querySelector('html, body').style.overflowY = 'hidden';
+    popUpShow();
     clearTimeout(timerPopUp);
   });
 
   window.addEventListener('click', (e) => {
     if (e.target === wrapper) {
-      wrapper.style.display = 'none';
-      document.querySelector('html, body').style.overflowY = '';
+      popUpHidden();
     }
   });
-
   closePopUp.addEventListener('click', () => {
-    wrapper.style.display = 'none';
-    document.querySelector('html, body').style.overflowY = '';
+    popUpHidden();
   });
 
   //  form /////////////////////////
   const form = document.querySelector('.form'),
     formWrapper = document.querySelector('.form__wrapper'),
-    btnSubmit = document.querySelector('[type="submit"]'),
     input = document.querySelectorAll('._req'),
     nameInput = document.querySelector('[name="name"]'),
     emailInput = document.querySelector('[name="email"]'),
     textarea = document.querySelector('[name="message"]'),
     checkbox = document.querySelector('#checkbox'),
+    checkboxLabel = document.querySelector('.item__checkbox'),
     loader = document.querySelector('.lds-spinner');
 
+  checkbox.addEventListener('change', (el) => {
+    if (checkbox.checked) {
+      checkboxLabel.style.borderBottom = '';
+    } else {
+      checkboxLabel.style.borderBottom = '1px solid red';
+    }
+  });
+
   input.forEach((el) => {
+    const div = document.createElement('div');
+    div.classList.add('_error');
+    div.innerHTML = 'Обязательное поля';
+
     el.addEventListener('input', (e) => {
+      if (el.value === '') {
+        el.parentElement.append(div);
+      } else {
+        div.remove();
+      }
+
       ///// validation email
       if (el === emailInput) {
         const req = /^[\w-\.\d*]+@[\w\d]+(\.\w{2,4})$/;
@@ -58,6 +79,7 @@ const formPopUp = () => {
           el.style.border = '';
         }
       }
+
       ///////////////textarea
       if (el === textarea) {
         if (el.value.length <= 3) {
@@ -84,6 +106,9 @@ const formPopUp = () => {
 
   function formSend(e) {
     e.preventDefault();
+    const warning = document.createElement('div');
+    warning.classList.add('warning');
+    warning.innerHTML = 'Заполните все поля';
 
     if (
       nameInput.value !== '' &&
@@ -91,9 +116,9 @@ const formPopUp = () => {
       checkbox.checked &&
       textarea.value !== ''
     ) {
-      document.querySelectorAll('._error').forEach((el) => {
-        el.remove();
-      });
+      if (form.lastChild === document.querySelector('.warning')) {
+        document.querySelector('.warning').remove();
+      }
 
       const formData = new FormData(form);
       const obj = {};
@@ -125,17 +150,14 @@ const formPopUp = () => {
           );
         });
     } else {
-      input.forEach((el) => {
-        const div = document.createElement('div');
-        div.classList.add('_error');
-        div.innerHTML = 'Обязательное поля';
-
-        if (el.value === '') {
-          el.parentElement.append(div);
-        } else {
-          div.remove();
-        }
-      });
+      if (form.lastChild !== document.querySelector('.warning')) {
+        form.appendChild(warning);
+      }
+      if (!checkbox.checked) {
+        checkboxLabel.style.borderBottom = '1px solid red';
+      } else {
+        checkboxLabel.style.borderBottom = '';
+      }
     }
   }
 };
