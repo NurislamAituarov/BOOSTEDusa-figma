@@ -26,6 +26,13 @@ import text4 from '../../../image/text4.png';
 import logo from '../../../image/Rectangle.png';
 import usa from '../../../image/usa.png';
 import v from '../../../image/v.png';
+import footer__block_img1 from '../../../image/amex.png';
+import footer__block_img3 from '../../../image/pay.png';
+import footer__block_img4 from '../../../image/klarna.png';
+import footer__block_img5 from '../../../image/card.png';
+import footer__block_img6 from '../../../image/pay2.png';
+import footer__block_img7 from '../../../image/v.png';
+import footer__block_img8 from '../../../image/viza4.png';
 
 document.querySelector('#logo').setAttribute('src', logo);
 
@@ -61,3 +68,11 @@ document.querySelector('#block__text3').setAttribute('src', text3);
 document.querySelector('#block__text4').setAttribute('src', text4);
 
 document.querySelector('#footer__block2_img').setAttribute('src', usa);
+
+document.querySelector('#footer__block3_item-img1').setAttribute('src', footer__block_img1);
+document.querySelector('#footer__block3_item-img3').setAttribute('src', footer__block_img3);
+document.querySelector('#footer__block3_item-img4').setAttribute('src', footer__block_img4);
+document.querySelector('#footer__block3_item-img5').setAttribute('src', footer__block_img5);
+document.querySelector('#footer__block3_item-img6').setAttribute('src', footer__block_img6);
+document.querySelector('#footer__block3_item-img7').setAttribute('src', footer__block_img7);
+document.querySelector('#footer__block3_item-img8').setAttribute('src', footer__block_img8);
