@@ -10,9 +10,9 @@ import header from './modules/js/Header';
 import slider from './modules/js/Slider';
 import test from './modules/js/test';
 import formPopUp from './modules/js/popUp';
+import './modules/js/image';
 
-console.log('Hello world');
+console.log('Hello world', 25);
 header();
 slider();
-// test();
 formPopUp();
