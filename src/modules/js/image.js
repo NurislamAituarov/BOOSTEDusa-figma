@@ -33,6 +33,117 @@ import footer__block_img5 from '../../../image/card.png';
 import footer__block_img6 from '../../../image/pay2.png';
 import footer__block_img7 from '../../../image/v.png';
 import footer__block_img8 from '../../../image/viza4.png';
+import gif from '../../../image/gif.gif';
+
+///////////////////////////////////////////////////////////////////////////////////
+
+const windowHeight = document.documentElement.clientHeight;
+let lazyImagePOsition = [];
+let wrapperPosition = [];
+const card = document.querySelectorAll('[alt="card" ]'),
+  wrapper = document.querySelectorAll('.block__wrapper');
+
+wrapper.forEach((item) => {
+  wrapperPosition.push(parseInt(item.getBoundingClientRect().top + pageYOffset));
+});
+
+card.forEach((item) => {
+  lazyImagePOsition.push(parseInt(item.getBoundingClientRect().top + pageYOffset));
+});
+
+function lazyWrapperPosition() {
+  const page = wrapperPosition.filter((item) => {
+    return pageYOffset > item - windowHeight;
+  });
+
+  wrapper.forEach((item, i) => {
+    if (page.length >= i) {
+      switch (i) {
+        case 0:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 1:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 2:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 3:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 4:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 5:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        case 6:
+          item.style.opacity = 1;
+          item.style.display = '';
+
+          break;
+        default:
+          item.style.opacity = 0;
+          item.style.display = 'none';
+
+          break;
+      }
+    } else {
+      item.style.opacity = 0;
+      item.style.display = 'none';
+    }
+  });
+}
+
+function lazyScrollCheck() {
+  let index = lazyImagePOsition.findIndex((item) => {
+    // console.log(item);
+    return pageYOffset > item - windowHeight;
+  });
+  // console.log(index);
+  card.forEach((item, i) => {
+    if (index >= 0) {
+      item.style.opacity = 1;
+      switch (i) {
+        case 0:
+          item.setAttribute('src', card1);
+          break;
+        case 1:
+          item.setAttribute('src', card2);
+          break;
+        case 2:
+          item.setAttribute('src', card3);
+          break;
+        case 3:
+          item.setAttribute('src', card4);
+          break;
+        case 4:
+          item.setAttribute('src', card5);
+          break;
+      }
+    } else {
+      item.setAttribute('src', gif);
+      item.style.opacity = 0;
+    }
+  });
+}
+window.addEventListener('scroll', lazyWrapperPosition);
+
+window.addEventListener('scroll', lazyScrollCheck);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.querySelector('#logo').setAttribute('src', logo);
 
@@ -40,11 +151,14 @@ document.querySelector('.main__block').style.backgroundImage = `url(${fon})`;
 document.querySelector('.first__item').style.backgroundImage = `url(${fon1})`;
 document.querySelector('.second__item').style.backgroundImage = `url(${fon2})`;
 document.querySelector('.block__skateboards').style.backgroundImage = `url(${fon3})`;
-document.querySelector('#first__card').setAttribute('src', card1);
-document.querySelector('#second__card').setAttribute('src', card2);
-document.querySelector('#three__card').setAttribute('src', card3);
-document.querySelector('#four__card').setAttribute('src', card4);
-document.querySelector('#five__card').setAttribute('src', card5);
+
+// lazyImagePOsition.push(
+//   parseInt(document.querySelector('#first__card').getBoundingClientRect().top + pageYOffset),
+// );
+// document.querySelector('#second__card').setAttribute('src', card2);
+// document.querySelector('#three__card').setAttribute('src', card3);
+// document.querySelector('#four__card').setAttribute('src', card4);
+// document.querySelector('#five__card').setAttribute('src', card5);
 
 document.querySelector('#slide1').setAttribute('src', slide1);
 document.querySelector('#slide2').setAttribute('src', slide2);
