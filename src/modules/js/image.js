@@ -51,11 +51,12 @@ card.forEach((item) => {
   lazyImagePOsition.push(parseInt(item.getBoundingClientRect().top + pageYOffset));
 });
 
+console.log(wrapperPosition);
 function lazyWrapperPosition() {
   const page = wrapperPosition.filter((item) => {
     return pageYOffset > item - windowHeight;
   });
-
+  console.log(page);
   wrapper.forEach((item, i) => {
     if (page.length >= i) {
       switch (i) {
